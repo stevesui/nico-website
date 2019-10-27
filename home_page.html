@@ -1,0 +1,249 @@
+<html>
+<head>
+	<link href="https://fonts.googleapis.com/css?family=Major+Mono+Display|Share+Tech+Mono&display=swap" rel="stylesheet">
+
+	<link href="https://fonts.googleapis.com/css?family=Cairo|IBM+Plex+Mono|Rubik|Varela&display=swap" rel="stylesheet">
+
+	<title>Grid Version of Terrorism Research Website</title>
+		<style>
+
+			:root {
+				--primary-color: white;
+				--content-font: 'IBM Plex Mono', monospace;
+			}
+
+			body {
+				background: #222;
+				width:100%;
+				height:100%;
+				margin:0;
+			}
+
+			.container {
+			    height:100%;
+			    padding: 0;
+			    margin: 0;
+			    display: grid;
+			    grid-gap: 0.1em;
+			    grid-template-columns: repeat(15, 1fr);
+			    grid-template-rows: 40px 50px 40px;
+			    grid-template-areas: 
+			        "l l l l l h h h h h h h h h h"
+			        "l l l l l h h h h h h h h h h"
+			        "l l l l l h h h h h h h h h h"
+			        "m m m m m h h h h h h h h h h"
+			        "m m m m m h h h h h h h h h h"
+			        "m m m m m h h h h h h h h h h"
+			        "m m m m m h h h h h h h h h h"
+			        "m m m m m h h h h h h h h h h"
+			        "m m m m m f f f f f f f f f f"
+			        
+			}
+
+			.container > div{
+				background: #111;
+			}
+
+			.logo{
+			    grid-area: l;
+			    color: #fbfbf8;
+			    display:inline-block;
+			    padding-left: 20px;
+			    padding-top:10px;
+			    
+				
+			    /*border: 2px solid red;*/
+			}
+
+			.logo h1{
+				font-family: 'Varela', sans-serif;
+				font-size:27px;
+				position: relative;
+				letter-spacing: 2px;
+			}
+
+			.logo .logo-link {
+				text-decoration: none;
+				color: var(--primary-color);
+			}
+
+			.vl{
+				margin: auto;
+				position:relative;
+				float: right;
+				top:15%;
+				width:10%;
+				height:60%;
+				border-left: 7px solid #fbfbf8;
+			}
+
+			.header {
+			    grid-area: h;
+			    /*border: 2px solid red;*/
+				padding-left: 20px;
+				padding-right: 20px;
+				font-size: 17px;
+				
+			}
+
+			.header h1{
+				font-family: var(--content-font);
+				color: #fbfbf8;
+				letter-spacing: 4px;
+			}
+
+			.header .home-info {
+				/*border:1px solid white;*/
+				width:90%;
+				font-family: var(--content-font);
+				font-size: 11.5px;
+				color: #fbfbf8;
+				letter-spacing: 3px;
+				line-height: 1rem;
+			}
+
+
+			.menu {
+			    grid-area: m;
+			    /*border: 2px solid red;*/
+			}
+
+			.nav {
+				/*border: 1px solid var(--primary-color);*/
+				/*display: block;*/
+				margin: 0 auto;
+				position: relative;
+				display:block;
+				width:100%;
+				height: 50%;
+				top:25%;
+			}
+
+			.nav ul{
+				list-style: none;
+				display: block;
+				top: 40%;
+			}
+
+			.nav .menu-link {
+				line-height:50px;
+				letter-spacing: 5px;
+				margin-left: -15px;
+			}
+
+			.menu-link {
+  				position: relative;
+  				display: inline-block;
+  				font-family: var(--content-font);
+  				font-size: 24px;
+  				font-weight: 400;
+  				text-align: center;
+			}
+
+			.menu-link,
+			.menu-link:hover {
+				color: var(--primary-color);
+				text-decoration: none;
+			}
+
+			.menu-link::after {
+  				content: "";
+  				position: absolute;
+			}
+
+			.nav .menu-link::after {
+  				top: 65%;
+  				height: 6px;
+				width: 0%;
+ 				left: 5%;
+				background-color: rgba(255, 255, 255, 0.6);
+   				transition: width 0.5s ;
+			}
+
+			.menu-link:hover::after {
+				width: 95%;
+				/*transition: width 0.5s ;*/
+			}
+
+			.content {
+			    grid-area: c;
+			    /*border: 2px solid red;*/
+			}
+
+			.footer {
+			    grid-area: f;
+			    /*border: 2px solid red;*/
+			}
+
+			.footer .btn{
+				position: relative;
+				top:25%;
+				right:5%;
+				/*border: 1px solid red;*/
+				border:none;
+				padding-left: 20px;
+				padding-right: 20px;
+				float: right;
+				background-color: #111;
+				cursor: pointer;
+			}
+
+			.footer .btn:hover {
+				-webkit-transform: scale(1.2);
+			}
+
+			.footer .about{
+				font-family: var(--content-font);
+				font-size: 20px;
+				letter-spacing: 2px;
+				color:#fbfbf8;
+			}
+
+
+
+		</style>
+</head>
+<body>
+	<div class = "container">
+		<div class = "logo">
+			<div class = "vl"></div>
+				<h1> 
+					<a class = "logo-link" href = 'home_page.html'> northwestern <br> NICO </a>
+				</h1>
+		</div>
+		<div class = "header">
+			<h1>Data on terrorism research<h1>
+			<div class = "home-info">
+				Contrary to the view that frames terrorist groups as isolated, autonomous actors, they operate as agents in an extensive interconnected network. Data on terrorism is a summer research project that focuses on better understanding the quantitative effects of this terrorist network model. 
+			</div>
+		</div>
+		<div class = "menu">
+			<div class = "nav">
+				<ul>
+					<li>
+						<a class = "menu-link" href='trial.html'>About</a>
+					</li>
+					<li>
+						<a class = "menu-link" href='data_page.php'>Data</a>
+	                </li>
+	                <li>
+	                    <a class = "menu-link" href='data_analysis.html'>Analysis</a>
+	                </li>
+	                <li>
+	                    <a class = "menu-link" href='contact.html'>Contact</a>
+	                </li>
+				</ul>
+			</div>
+		</div>
+		<div class = "footer">
+			<a href ='trial.html'>
+				<button class = "btn about">
+					Read More &#8594
+				</button>
+			</a>
+		</div>
+	</div>
+
+
+</body>
+</html>

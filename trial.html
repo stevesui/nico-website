@@ -1,0 +1,294 @@
+<html>
+<head>
+	<link href="https://fonts.googleapis.com/css?family=Major+Mono+Display|Share+Tech+Mono&display=swap" rel="stylesheet">
+
+	<link href="https://fonts.googleapis.com/css?family=Cairo|IBM+Plex+Mono|Rubik|Varela&display=swap" rel="stylesheet">
+
+	<title>Grid Version of Terrorism Research Website</title>
+		<style>
+
+			:root {
+				--primary-color: white;
+				--content-font: 'IBM Plex Mono', monospace;
+			}
+
+			body {
+				background: #222;
+				width:100%;
+				height:100%;
+				margin:0;
+			}
+
+			.container {
+			    height:100%;
+			    padding: 0;
+			    margin: 0;
+			    display: grid;
+			    grid-gap: 0.1em;
+			    grid-template-columns: repeat(15, 1fr);
+			    grid-template-rows: 40px 50px 40px;
+			    grid-template-areas: 
+			        "l l l l l h h h h h h h h h h"
+			        "l l l l l h h h h h h h h h h"
+			        "l l l l l c c c c c c c c c c"
+			        "m m m m m c c c c c c c c c c"
+			        "m m m m m c c c c c c c c c c"
+			        "m m m m m c c c c c c c c c c"
+			        "m m m m m c c c c c c c c c c"
+			        "m m m m m c c c c c c c c c c"
+			        "m m m m m f f f f f f f f f f"
+			        
+			}
+
+			.container > div{
+				background: #111;
+			}
+
+			.logo{
+			    grid-area: l;
+			    color: #fbfbf8;
+			    display:inline-block;
+			    padding-left: 20px;
+			    padding-top:10px;
+				
+			    /*border: 2px solid red;*/
+			}
+
+			.logo h1{
+				font-family: 'Varela', sans-serif;
+				font-size:27px;
+				position: relative;
+				letter-spacing: 2px;
+				overflow:hidden;
+			}
+
+			.logo .logo-link {
+				text-decoration: none;
+				color: var(--primary-color);
+			}
+
+			.vl{
+				margin: auto;
+				position:relative;
+				float: right;
+				top:15%;
+				width:10%;
+				height:60%;
+				border-left: 7px solid #fbfbf8;
+			}
+
+			.header {
+			    grid-area: h;
+			    /*border: 2px solid red;*/
+				padding-left: 20px;
+				padding-right: 20px;
+				font-size: 17px;
+				overflow:hidden;
+				
+			}
+
+			.header h1{
+				font-family: var(--content-font);
+				color: #fbfbf8;
+				letter-spacing: 4px;
+			}
+
+
+			.menu {
+			    grid-area: m;
+			    overflow:hidden;
+			    /*border: 2px solid red;*/
+			}
+
+			.nav {
+				/*border: 1px solid var(--primary-color);*/
+				/*display: block;*/
+				margin: 0 auto;
+				position: relative;
+				display:block;
+				width:100%;
+				height: 50%;
+				top:25%;
+			}
+
+			.nav ul{
+				list-style: none;
+				display: block;
+				top: 40%;
+			}
+
+			.nav .menu-link {
+				line-height:50px;
+				letter-spacing: 5px;
+				margin-left: -15px;
+			}
+
+			.menu-link {
+  				position: relative;
+  				display: inline-block;
+  				font-family: var(--content-font);
+  				font-size: 24px;
+  				font-weight: 400;
+  				text-align: center;
+			}
+
+			.menu-link,
+			.menu-link:hover {
+				color: var(--primary-color);
+				text-decoration: none;
+			}
+
+			.menu-link::after {
+  				content: "";
+  				position: absolute;
+			}
+
+			.nav .menu-link::after {
+  				top: 65%;
+  				height: 6px;
+				width: 0%;
+ 				left: 5%;
+				background-color: rgba(255, 255, 255, 0.6);
+   				transition: width 0.5s ;
+			}
+
+			.menu-link:hover::after {
+				width: 95%;
+				/*transition: width 0.5s ;*/
+			}
+
+			.content {
+			    grid-area: c;
+			    overflow:auto;
+			    /*border: 2px solid red;*/
+			}
+
+			.content .description {
+				width:90%;
+				/*border: 1px solid white;*/
+				color: #fbfbf8;
+				font-family: var(--content-font);
+				font-size: 12px;
+				line-height: 1rem;
+				letter-spacing: 2px;
+				padding-left: 20px;
+			}
+
+			.content strong {
+				font-style:italic;
+				font-size: 14px;
+			}
+
+			.content .variables {
+				/*border: 1px solid white;*/
+				font-family: var(--content-font);
+				font-size:13px;
+				color: #fbfbf8;;
+				padding-left: 20px;
+				margin-top: 30px;
+			}
+
+			.content .variables h2{
+				text-decoration: underline;
+			}
+
+
+
+
+			.footer {
+			    grid-area: f;
+			    height: 60px;
+			    overflow:hidden;
+			    /*border: 2px solid red;*/
+			}
+
+			.footer .btn{
+				position: relative;
+				top:25%;
+				right:5%;
+				/*border: 1px solid red;*/
+				border:none;
+				padding-left: 20px;
+				padding-right: 20px;
+				float: right;
+				background-color: #111;
+				cursor: pointer;
+			}
+
+			.footer .btn:hover {
+				-webkit-transform: scale(1.2);
+			}
+
+			.footer .about{
+				font-family: var(--content-font);
+				font-size: 20px;
+				letter-spacing: 2px;
+				color:#fbfbf8;
+			}
+
+
+
+		</style>
+</head>
+<body>
+	<div class = "container">
+		<div class = "logo">
+			<div class = "vl"></div>
+				<h1> 
+					<a class = "logo-link" href = 'home_page.html'> northwestern <br> NICO </a>
+				</h1>
+		</div>
+		<div class = "header">
+			<h1>About<h1>
+		</div>
+		<div class = "menu">
+			<div class = "nav">
+				<ul>
+					<li>
+						<a class = "menu-link" href='trial.html'>About</a>
+					</li>
+					<li>
+						<a class = "menu-link" href='data_page.php'>Data</a>
+	                </li>
+	                <li>
+	                    <a class = "menu-link" href='data_analysis.html'>Analysis</a>
+	                </li>
+	                <li>
+	                    <a class = "menu-link" href='contact.html'>Contact</a>
+	                </li>
+				</ul>
+			</div>
+		</div>
+		<div class = "content">
+			<div class = "description">
+				<p>The relationships that terrorist groups form with one another can be manifested as alliances or rivalries. Generally, other work in this field has focused on the long-run effects of number of allies on a group's lethality and relied on the total number of allies, which is calculated either at the end of a group's lifetime or in the present given the group is still alive. <br><br> Our main point of interest differs in that we are observing the yearly effects of the number of allies. Specifically, we analyze the effect that a certain number of allies has on the lethality of a group year to year. In our case, we look at <strong> three </strong> different dependent variables as measures of lethality: <strong>log count of kills</strong>, the <strong>count of attacks</strong> and the <strong>average number of kills per attack</strong>.</p>
+			</div>
+
+			<div class = "variables">
+				<h2>Variables of interest</h2>
+				<p> Below are variables that we considered for every terrorist group in our data sets:
+				<ul>
+					<li class = "variable-item">Year</li>
+					<li class = "variable-item">Country</li>
+					<li class = "variable-item">Type of Attack</li>
+					<li class = "variable-item">Percentage of Nonlethal Attacks</li>
+					<li class = "variable-item">Q (measure of group's capability)</li>
+					<li class = "variable-item">T (measure of group's resources)</li>
+					<li class = "variable-item">Number of Allies</li>
+					<li class = "variable-item">Ally Differentials</li>
+				</ul>
+			</div>
+			<p>The relationships that terrorist groups form with one another can be manifested as alliances or rivalries. Generally, other work in this field has focused on the long-run effects of number of allies on a group's lethality and relied on the total number of allies, which is calculated either at the end of a group's lifetime or in the present given the group is still alive. <br><br> Our main point of interest differs in that we are observing the yearly effects of the number of allies. Specifically, we analyze the effect that a certain number of allies has on the lethality of a group year to year. In our case, we look at <strong> three </strong> different dependent variables as measures of lethality: <strong>log count of kills</strong>, the <strong>count of attacks</strong> and the <strong>average number of kills per attack</strong>.</p><p>The relationships that terrorist groups form with one another can be manifested as alliances or rivalries. Generally, other work in this field has focused on the long-run effects of number of allies on a group's lethality and relied on the total number of allies, which is calculated either at the end of a group's lifetime or in the present given the group is still alive. <br><br> Our main point of interest differs in that we are observing the yearly effects of the number of allies. Specifically, we analyze the effect that a certain number of allies has on the lethality of a group year to year. In our case, we look at <strong> three </strong> different dependent variables as measures of lethality: <strong>log count of kills</strong>, the <strong>count of attacks</strong> and the <strong>average number of kills per attack</strong>.</p>
+		</div>
+		<div class = "footer">
+			<a href ='data_page.php'>
+				<button class = "btn about">
+					View Data &#8594
+				</button>
+			</a>
+		</div>
+	</div>
+
+
+</body>
+</html>

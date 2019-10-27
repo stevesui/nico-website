@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="https://fonts.googleapis.com/css?family=Major+Mono+Display|Share+Tech+Mono&display=swap" rel="stylesheet">
+	<title>Grid Version of Terrorism Research Website</title>
+		<style>
+
+			:root {
+				--primary-color: white;
+				--content-font: 'Share Tech Mono', monospace;
+			}
+
+			body {
+				background: #222;
+				width:100%;
+				height:100%;
+				margin:0;
+				overflow: hidden;
+			}
+
+			.wrapper > .LHS {
+				background: #111;
+				position: relative;
+				padding:1em;
+				grid-row: 1/3;
+				/*border: 5px solid yellow;*/
+			}
+
+			.LHS #main-title{
+				position: absolute;
+				/*border: 1px solid white;*/
+				padding-left: 20px;
+				padding-right: 20px;
+				top:-0.05%;
+				font-size: 20px;
+			}
+
+			.LHS #main-title h1{
+				font-family: var(--content-font);
+				color: #fbfbf8;/*rgba(191, 63, 63, 0.75);*/
+				letter-spacing: 4px;
+			}
+
+			.LHS #content-on-right {
+				position: absolute;
+				/*border: 1px solid yellow;*/
+				padding-left: 20px;
+				padding-right: 20px;
+				top: 15%;
+			}
+
+			.LHS #content-on-right p {
+				font-family: var(--content-font);
+				font-size: 12px;
+				letter-spacing: 3px;
+				color: rgba(255, 239, 239, 0.75);
+			}
+
+			.LHS .btn{
+				position:absolute;
+				bottom: 25%;
+				right:5%;
+				/*border: 1px solid red;*/
+				border:none;
+				padding-left: 20px;
+				padding-right: 20px;
+				/*float: right;*/
+				background-color: #111;
+				cursor: pointer;
+			}
+
+			.LHS .btn:hover {
+				-webkit-transform: scale(1.2);
+			}
+
+			.LHS .about{
+				font-family: var(--content-font);
+				font-size: 20px;
+				letter-spacing: 5px;
+				color:#fbfbf8;
+			}
+
+			.RHS {
+				color: var(--primary-color);
+
+			}
+
+			.nav {
+				/*border: 1px solid var(--primary-color);*/
+				/*display: block;*/
+				margin: 0 auto;
+				position: relative;
+				display:block;
+				width:100%;
+				height: 50%;
+				top:25%;
+			}
+
+			.nav ul{
+				list-style: none;
+				display: block;
+				top: 40%;
+			}
+
+			/*.nav .menu-link {
+				
+				margin-left: -25px;
+				font-family: 'Share Tech Mono', monospace;
+				font-size: 25px;
+				text-decoration: none;
+				color: #fbfbf8;
+				line-height: 40px;
+			}*/
+
+
+			.nav .menu-link {
+				line-height:50px;
+				letter-spacing: 5px;
+				margin-left: -24px;
+			}
+
+			.menu-link {
+  				position: relative;
+  				display: inline-block;
+  				font-family: var(--content-font);
+  				font-size: 24px;
+  				font-weight: 400;
+  				text-align: center;
+			}
+
+			.menu-link,
+			.menu-link:hover {
+				color: var(--primary-color);
+				text-decoration: none;
+			}
+
+			.menu-link::after {
+  				content: "";
+  				position: absolute;
+			}
+
+			.nav .menu-link::after {
+  				top: 65%;
+  				height: 6px;
+				width: 0%;
+ 				left: 5%;
+				background-color: rgba(255, 255, 255, 0.6);
+   				transition: width 0.5s ;
+			}
+
+			.menu-link:hover::after {
+				width: 95%;
+				/*transition: width 0.5s ;*/
+			}
+
+
+
+
+
+			/*
+			.menu-link::after{
+				content: "";
+
+				display:block;
+    			width:0;
+    			height:10px;
+    			margin-left: -25px;
+    			background: #333;
+    			
+    			transition: width 0.5s; 
+			}
+
+			.menu-link:hover::after{
+				width:100%;
+			}*/
+
+
+
+			.wrapper > .RHS {
+				background: #111;
+				padding:1em;
+				height:100vh;
+			}
+
+			#logo {
+				background:#111;
+				color: #fbfbf8;
+				grid-row:1/2;
+			}
+
+			#logo{
+				position: relative;
+				/*padding-left: 20px;
+				padding-top: 13px;*/
+				width: 100%;
+				/*text-align: center;*/
+			}
+
+
+			#logo-text {
+				display:inline-block;
+				width: 315px;
+				height: 100px;
+				margin-top:10px;
+				/*border: 1px solid red;*/
+				/*background-color: yellow;*/
+				margin-left: 25px;
+
+			}
+
+			#logo-text h3{
+				font-family: 'Major Mono Display', monospace;
+				font-size:27px;
+				position: relative;
+			}
+
+			.vl{
+				margin: auto;
+				position:relative;
+				float: right;
+				top:23%;
+				width:2%;
+				height:60%;
+				border-left: 7px solid #fbfbf8;
+			}
+
+				
+			.wrapper {
+				display:grid;
+				grid-template-columns: 1fr 2.15fr;
+				grid-auto-rows: minmax(125px, auto);
+				grid-gap: 0.1em;
+				justify-items: stretch; /*positions items horizontally*/
+				align-items: stretch; /*positions items vertically*/
+				margin: 0 auto;
+			}
+
+
+		</style>
+</head>
+<body>
+	<div class = "wrapper">
+		<div id = "logo">
+			<div id="logo-text">
+				<div class = "vl"></div>
+				<h3><strong class = "test">northwestern <br> NICO</h3></strong>
+				
+			</div>
+		</div>
+
+		<div class = "RHS">
+			<div class = "nav">
+				<ul>
+					<li>
+						<a class = "menu-link" href='mainsearch_html.php'>About</a>
+					</li>
+					<li>
+						<a class = "menu-link" href='mainsearch_html.php'>Data</a>
+	                </li>
+	                <li>
+	                    <a class = "menu-link" href='mainsearch_html.php'>Analysis</a>
+	                </li>
+	                <li>
+	                    <a class = "menu-link" href='mainsearch_html.php'>Contact</a>
+	                </li>
+				</ul>
+			</div>
+		</div>
+
+		<div class = "LHS">
+			<div id = "main-title">
+				<h1> Data on terrorism research </h1>
+			</div>
+			<div id = "content-on-right">
+				<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vulputate odio ut enim blandit volutpat maecenas. Odio eu feugiat pretium nibh ipsum consequat nisl vel. Adipiscing enim eu turpis egestas pretium. Montes nascetur ridiculus mus mauris vitae ultricies leo integer malesuada. Lectus magna fringilla urna porttitor rhoncus dolor purus. Arcu cursus euismod quis viverra nibh3cras pulvinar. </p>
+			</div>
+
+			<a href ='https://www.freecodecamp.org/'>
+				<button class = "btn about">
+					Learn more &#8594
+				</button>
+			</a>
+		</div>
+	</div>
+</body>
+</html>
