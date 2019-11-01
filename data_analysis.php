@@ -4,7 +4,7 @@
 
 	<link href="https://fonts.googleapis.com/css?family=Cairo|IBM+Plex+Mono|Rubik|Varela&display=swap" rel="stylesheet">
 
-	<title>Data Display</title>
+	<title>Data Search Page</title>
 		<style>
 
 			:root {
@@ -36,7 +36,7 @@
 			        "m m m m m c c c c c c c c c c"
 			        "m m m m m c c c c c c c c c c"
 			        "m m m m m c c c c c c c c c c"
-			        "m m m m m c c c c c c c c c c"
+			        "m m m m m f f f f f f f f f f"
 			        
 			}
 
@@ -83,6 +83,7 @@
 				padding-left: 20px;
 				padding-right: 20px;
 				font-size: 17px;
+				overflow: hidden;
 				
 			}
 
@@ -157,71 +158,169 @@
 
 			.content {
 			    grid-area: c;
+			    overflow:auto;
 			    /*border: 2px solid red;*/
 			}
 
-			h3 {
-				color: #fbfbf8;
+			select {
+				background: #ddc7c7;
+				/*border: 1px solid yellow;*/
+				border-radius: 5px;
+				width: 100%;
+				padding: 15px;
+				
+				color: #3F3F3F;
 				font-family: var(--content-font);
+    			font-size: 15px;
+    			-webkit-appearance: none;
+				-moz-appearance: none;
+				-ms-appearance: none;
+	 			-o-appearance: none;
+				appearance: none;
+			}
+
+
+			.instructions {
+				display: inline-block;
+				position: relative;
 				/*border: 1px solid white;*/
-				width: 13%;
-				margin-left: 20px;
-				text-decoration: underline;
+				left: 20px;
+				top:20px;
+				width:90%;
 			}
 
-			table {
-				color: #fbfbf8;
+			.instructions h3 {
 				font-family: var(--content-font);
-				border-spacing: 55px 10px;
+				font-size:20px;
+				color:white;
+			}
+		
+			.select-wrapper {
+				/*display:inline-block;
+				border:1px solid yellow;
+				position:absolute;
+				float: right;*/
+				position: relative;
+				left: 20px;
+				top: 35px;
+				width:90%;
+
+				/*border: 1px solid yellow;*/
+
+
+				
+
 			}
 
-			.tab {
-				overflow: hidden;
-				/*border: 1px solid #ccc;*/
-				background-color: #111;
 
-			}
-
-			.tab button {
-				background-color: inherit;
-				float: left;
+			/*.select-wrapper:after {
 				font-family: var(--content-font);
-				border:none;
-				outline: none;
-				outline:none;
-				cursor: pointer;
-				padding: 14px 16px;
-				transition: 1s;
-				width: 33%;
+  				content: ' \2193';
+  				font-size: 28px;
+  				position: absolute;
+  				top: 10px;
+  				right: 20px;
+  				color: #434B67;
+  				pointer-events: none;
+			}*/
+
+			.select-wrapper:after{
+				content: ' \2193';
+				position:relative;
+				font-size:28px;
+				top:-45px;
+				left:-20px;
+				float: right;
+				color: #434B67;
 			}
 
-			/* Change background color of buttons on hover */
-			.tab button:hover{
-				background-color: #ccc;
-			}
 
-			/* Create an active/current tablink class; stays that color when clicked */
-			.tab button.active {
-				background-color: #ccc;
-			}
 
-			.tabcontent {
-				animation: fadeEffect 0.5s;
-				display: none;
-				/*font-style: var(--content-font);*/
-				/*padding: 6px 12px;
-				border: 1px solid #ccc;
-				border-top:none;*/
-			}
-
+/*input {
+	display: block;
+	width: 110px;
+	font-family: 'Share Tech Mono', monospace;
+    font-size: 18px;
+    letter-spacing: 4px;
+    background-color: #111;
+    border: 2px;
+    border-style: solid;
+    border-color: #ddc7c7;
+    font-size: 22px;
+    color:#ddc7c7;
+    
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
+    -webkit-transition: color 1s;
+    -moz-transition:    color 1s;
+    -ms-transition:     color 1s;
+    -o-transition:      color 1s;
+    transition:         color 1s;
+}*/
+			
 			
 
+		
+	
 
 
-			@-webkit-keyframes fadeEffect {
- 				from {opacity: 0;}
- 				to {opacity: 1;}
+			.footer {
+			    grid-area: f;
+			  
+			    overflow: hidden;
+			    /*border: 2px solid red;*/
 			}
+
+			.footer #wrapper{
+				
+				position: relative;
+				top:25%;
+				right:5%;
+				/*border: 1px solid red;*/
+				
+			
+				padding-left: 20px;
+				padding-right: 20px;
+
+				float: right;
+				
+				background-color: #111;
+				
+			}
+
+			.footer #wrapper #submit-button{
+				font-family: var(--content-font);
+				font-size: 20px;
+				letter-spacing: 2px;
+				color:#fbfbf8;
+				background-color: #111;
+				cursor: pointer;
+			}
+
+
+
+			.footer #wrapper #submit-button:hover {
+				-webkit-transform: scale(1.2);
+				/*color: #d3052e;*/
+			}
+
+			.footer .about{
+				font-family: var(--content-font);
+				font-size: 20px;
+				letter-spacing: 2px;
+				color:#fbfbf8;
+			}
+
+			/*#wrapper {
+	margin: 0;
+	position: absolute;
+	top:450%;
+	left:50%;
+	margin-right:-50%;
+	transform: translate(-50%,-50%);
+	
+}*/
 
 
 
@@ -236,8 +335,7 @@
 				</h1>
 		</div>
 		<div class = "header">
-                        <?php include 'update_data.php';?>
-		<!--	<h1>Name of Group<h1>   -->
+			<h1>Analysis<h1>
 		</div>
 		<div class = "menu">
 			<div class = "nav">
@@ -258,34 +356,29 @@
 			</div>
 		</div>
 		<div class = "content">
-		<div class = "tab">
-            	<button class="tablinks" onclick = "openTab(event, 'Activity')" id="defaultOpen">Activity</button>
-            	<button class = "tablinks" onclick = "openTab(event, 'Details')">Details</button>
-            	<button class = "tablinks" onclick = "openTab(event, 'Graphs')">Graphs</button>
-        	</div>
+			<div class = "instructions">
+				<h3>Select analysis reports in the drop-down menu:</h3>
+			</div>
+                        <?php include "summary.php";?>
+                </div>
 
-        	<div id = "Activity" class = "tabcontent">
-            	<h3>Activity</h3>
-		  <table>
-			<?php include 'process_mainsearch.php';?>
-		 </table>
-        	</div>
+                <!--
+                <div id="wrapper">
+                    <input type = "submit">
+                </div>-->
 
-        	<div id="Details" class="tabcontent">
-            	<h3> Details </h3>
-        	</div>
-
-        	<div id="Graphs" class="tabcontent">
-		<h3>Graphs</h3>
-                  <!-- <table> -->
-                        <?php include 'activity_chart.php';?>
-                  <!-- </table> -->
-        	</div>
-
-		<script src = "process_mainsearch.js"></script>
-
+            
 		</div>
-		
+		<div class = "footer">
+			<div id = "wrapper">
+				<!--<button class = "btn about">-->
+
+					<input id = "submit-button" type = "submit" value = "Submit &#8594"> 
+						
+				<!--</button>-->
+			</div>
+		</div>
+		</form> 
 	</div>
 
 
