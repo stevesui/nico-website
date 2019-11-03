@@ -272,7 +272,10 @@
         	</div>
 
         	<div id="Details" class="tabcontent">
-            	<h3> Details </h3>
+		<h3> Details </h3>
+	 	 <table>
+                        <?php include 'process_details.php';?>
+                 </table>
         	</div>
 
         	<div id="Graphs" class="tabcontent">
