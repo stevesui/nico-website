@@ -34,18 +34,18 @@
 
         console.log("jsonData = " +jsonData);
 
-	var text = "<table border=\"1\" style=\"color: white;\">"; 
+	var text = "<table style=\"border-collapse: collapse;color: white;padding: 5px;\">"; 
 	if (type =="org")
-		text = text +"<tr><th>Total Kills</th><th>Terrorist Group</th></tr>";
+		text = text +"<tr style=\"border: 1px solid orange;\"><th style=\"border: 1px solid orange;\">Total Kills</th style=\"border: 1px solid orange;\"><th>Terrorist Group</th></tr>";
         else
-		text = text +"<tr><th>Total Kills</th><th>Year</th></tr>";
+		text = text +"<tr style=\"border: 1px solid orange;\"><th style=\"border: 1px solid orange;\">Total Kills</th><th style=\"border: 1px solid orange;\">Year</th></tr>";
 	var summary_list = JSON.parse(jsonData);
 	console.log("summary_list "+summary_list);
 	for (var i  in summary_list) { 
 		console.log("i : "+summary_list[i]);
 		console.log("type of "+typeof summary_list[i]);
 		var row = summary_list[i];
-		text = text + "<tr><td style=\"min-width:100px\">"+row[0]+"</td><td style=\"min-width:100px\">"+row[1]+"</td></tr>";
+		text = text + "<tr style=\"border: 1px solid orange;\"><td style=\"border: 1px solid orange;\">"+row[0]+"</td><td style=\"border: 1px solid orange;\">"+row[1]+"</td></tr>";
 	}
 
 	text = text +"</table>";
